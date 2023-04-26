@@ -1,4 +1,3 @@
-import EmailUtils
 pipeline {
     agent any
 
@@ -45,8 +44,8 @@ pipeline {
                     mailer = Jenkins.instance.createProject(Mailer.class, "mailer")
                     mailer.sendMail(
                       recipient,
-                      new TextBody(body),
-                      new TextBody(subject)
+                      "body",
+                      "konu"
                     )
 
                 }
