@@ -31,9 +31,15 @@ pipeline {
                     archiveArtifacts 'target/*.jar'
                 }
             }
-            script {
+        }
+        stage(sen email') {
+            steps {
+                // Get some code from a GitHub repository
+                script {
 
+                }
             }
+            
         }
     }
 }
