@@ -36,7 +36,7 @@ pipeline {
             steps {
                 // Get some code from a GitHub repository
                 script {
-
+                    echo "Deploying ${env.VERSION} version"
                 }
             }
             
