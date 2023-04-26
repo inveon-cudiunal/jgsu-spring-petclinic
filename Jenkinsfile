@@ -1,3 +1,4 @@
+import EmailUtils
 pipeline {
     agent any
 
