@@ -32,7 +32,7 @@ pipeline {
                 }
             }
         }
-        stage(sen email') {
+        stage('send email') {
             steps {
                 // Get some code from a GitHub repository
                 script {
