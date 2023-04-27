@@ -30,7 +30,7 @@ pipeline {
                always {
                     //junit '**/target/surefire-reports/TEST-*.xml'
                     //archiveArtifacts 'target/*.jar'
-                 emailext body: ${currentBuild.result}, 
+                 emailext body: "${currentBuild.result}", 
                       recipientProviders: [[$class: 'DevelopersRecipientProvider']], 
                       subject: 'Build Notification', 
                       to: 'youremail@example.com'
