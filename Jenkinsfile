@@ -1,3 +1,9 @@
+def sendEmail() {
+  emailext body: 'Build successful!', 
+           recipientProviders: [[$class: 'DevelopersRecipientProvider']], 
+           subject: 'Build Notification', 
+           to: 'youremail@example.com'
+}
 pipeline {
     agent any
 
@@ -34,21 +40,8 @@ pipeline {
         }
         stage('send email') {
             steps {
-                // Get some code from a GitHub repository
-                script {
-                    echo "Deploying ${env.VERSION} version"
-                    def subject = "Email Subject"
-                    def body = "Email Body"
-                    def recipient = "example@example.com"
-
-                    mailer = Jenkins.instance.createProject(Mailer.class, "mailer")
-                    mailer.sendMail(
-                      recipient,
-                      "body",
-                      "konu"
-                    )
-
-                }
+                // Send email
+                sendEmail()
             }
             
         }
