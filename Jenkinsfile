@@ -18,7 +18,7 @@ pipeline {
             steps {
                 // Run Maven on a Unix agent.
                 //sh "mvn package"
-              sh 'false'
+              sh 'true'
 
                 // To run Maven on a Windows agent, use
                 // bat "mvn -Dmaven.test.failure.ignore=true clean package"
